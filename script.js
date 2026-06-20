@@ -24,7 +24,8 @@ function calculateTotal() {
 document.getElementById('orderForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const nomorWhatsApp = "6281234567890"; // GANTI DENGAN NOMOR WHATSAPP-MU (Gunakan kode negara, misal 62)
+    // 1. PASTIKAN NOMOR DI SINI SUDAH BENAR (Gunakan string/tanda kutip)
+    const nomorWhatsApp = "6285363615993"; 
     
     const game = document.getElementById('gameSelect').value;
     const ign = document.getElementById('ign').value;
@@ -36,14 +37,17 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
         return;
     }
     
-    // Struktur teks pesan WhatsApp
-    const pesan = `Halo Admin JokiGaming, saya mau order joki:%0A%0A` +
-                  `🎮 *Game:* ${game}%0A` +
-                  `🆔 *IN GAME NAME:* ${ign}%0A` +
-                  `🔢 *Jumlah:* ${jumlah}%0A` +
-                  `💰 *Total Harga:* ${totalHarga}%0A%0A` +
-                  `Mohon segera diproses ya!`;
+    // 2. Gunakan format teks biasa, biarkan JavaScript yang melakukan encoding nanti
+    const teksPesan = `Halo Admin JokiGaming, saya mau order joki:\n\n` +
+                      `🎮 *Game:* ${game}\n` +
+                      `🆔 *IN GAME NAME:* ${ign}\n` +
+                      `🔢 *Jumlah:* ${jumlah}\n` +
+                      `💰 *Total Harga:* ${totalHarga}\n\n` +
+                      `Mohon segera diproses ya!`;
+                      
+    // 3. Gunakan encodeURIComponent agar URL terbentuk dengan sempurna
+    const pesanSempurna = encodeURIComponent(teksPesan);
                   
-    // Membuka tab baru menuju WhatsApp
-    window.open(`https://api.whatsapp.com/send?phone=${6285363615993}&text=${pesan}`, '_blank');
+    // 4. Panggil variabel nomorWhatsApp yang sudah dibuat di atas
+    window.open(`https://api.whatsapp.com/send?phone=${nomorWhatsApp}&text=${pesanSempurna}`, '_blank');
 });
