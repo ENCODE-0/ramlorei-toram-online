@@ -37,7 +37,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     }
     
     // Struktur teks pesan WhatsApp
-    const pesan = `Halo Admin JokiGaming, saya mau order joki:%0A%0A` +
+    const pesan = `Halo Admin Ramlorei, saya mau order joki:%0A%0A` +
                   `🎮 *Game:* ${game}%0A` +
                   `🆔 *IN GAME NAME:* ${ign}%0A` +
                   `🔢 *Jumlah:* ${jumlah}%0A` +
