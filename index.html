@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokiGaming - Layanan Joki Tercepat & Terpercaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ramlorei<span> jokiin</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#order">Order</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Joki event game tanpa ribet, <br>Serahkan Pada <span>Ahlinya!</span></h1>
+            <p>Proses cepat harga tepat. jangan sampai progresmu tertinggal.</p>
+            <a href="#services" class="btn-primary">Lihat Harga</a>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <h2>Layanan Populer</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>MAIN QUEST TORAM ONLINE</h3>
+                <p>Joki MQ perBab</p>
+                <div class="price">Mulai Rp 3000 / BAB</div>
+                <button class="btn-order" onclick="selectGame('Toram Online', 5000)">Order Sekarang</button>
+            </div>
+            <div class="card">
+                <h3>TORAM ONLINE</h3>
+                <p>Joki Event Arwah</p>
+                <div class="price">Mulai Rp 50.000 /m Point Event</div>
+                <button class="btn-order" onclick="selectGame('Toram Online', 30000)">Order Sekarang</button>
+            </div>
+            <div class="card">
+                <h3>TORAM ONLINE</h3>
+                <p>Joki Material</p>
+                <div class="price">Mulai Rp 25.000 / full </div>
+                <button class="btn-order" onclick="selectGame('Toram Online', 50000)">Order Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <h2>Formulir Pemesanan</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="gameSelect">personal kontak</label>
+                <input type="text" id="gameSelect" readonly placeholder="no whatsapp">
+            </div>
+            <div class="form-group">
+                <label for="userId">IN GAME NAME</label>
+                <input type="text" id="userId" required placeholder="Contoh: IGN : RAMLOREI">
+            </div>
+            <div class="form-group">
+                <label for="qty">Jumlah (Bab mq/point event/material)</label>
+                <input type="number" id="qty" min="1" value="1" required oninput="calculateTotal()">
+            </div>
+            <div class="total-box">
+                Total Harga: <span id="totalPrice">Rp 0</span>
+            </div>
+            <button type="submit" class="btn-submit">Kirim via WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 jokiin aja di ramlorei. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
