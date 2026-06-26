@@ -14,6 +14,7 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Layanan</a></li>
+            <li><a href="#news">Berita</a></li>
             <li><a href="#order">Order</a></li>
         </ul>
     </nav>
@@ -30,23 +31,73 @@
         <h2>Layanan Populer</h2>
         <div class="card-container">
             <div class="card">
-                <h3>TORAM ONLINE</h3>
+                <h3>MAIN QUEST TORAM ONLINE</h3>
                 <p>Joki MQ perBab</p>
-                <div class="price">Mulai Rp 3000 / BAB</div>
-                <button class="btn-order" onclick="selectGame('Joki MQ perBab', 5000)">Order Sekarang</button>
+                <div class="price">Mulai Rp 4.500 / BAB</div>
+                <button class="btn-order" onclick="selectGame('Toram Online', 5000)">Order Sekarang</button>
             </div>
             <div class="card">
                 <h3>TORAM ONLINE</h3>
                 <p>Joki Event Arwah</p>
                 <div class="price">Mulai Rp 50.000 /m Point Event</div>
-                <button class="btn-order" onclick="selectGame('Joki Event Arwah', 30000)">Order Sekarang</button>
+                <button class="btn-order" onclick="selectGame('Toram Online', 30000)">Order Sekarang</button>
             </div>
             <div class="card">
                 <h3>TORAM ONLINE</h3>
                 <p>Joki Material</p>
                 <div class="price">Mulai Rp 25.000 / full </div>
-                <button class="btn-order" onclick="selectGame('Joki Material', 50000)">Order Sekarang</button>
+                <button class="btn-order" onclick="selectGame('Toram Online', 50000)">Order Sekarang</button>
             </div>
+        </div>
+    </section>
+
+    <section id="news" class="news-section">
+        <h2>Berita & Promo Seru</h2>
+        <p class="news-subtitle">Info diskon ter-update biar ngejoki makin hemat!</p>
+        
+        <div class="slider-wrapper">
+            <button class="slide-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+            
+            <div class="slider-container">
+                <div class="slider-track" id="sliderTrack">
+                    
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="https://github.com/user-attachments/assets/5700c24c-a13c-4e2e-a13f-071c1e193726" alt="Poster Berita Diskonku">
+                            <span class="badge-promo">PROMO DISKON</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Diskonku Akhir Bulan: Joki Event Arwah Potong Harga!. khusus tgl 26 juni 2026,joki event potongan harga hingga 69%</h3>
+                            <p>Khusus buat kamu yang nge-joki lewat event Diskonku, nikmati potongan harga langsung tanpa ribet untuk semua layanan Toram Online. Yuk klaim vouchermu sekarang sebelum event habis!</p>
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="https://github.com/user-attachments/assets/5700c24c-a13c-4e2e-a13f-071c1e193726" alt="Promo MQ Toram">
+                            <span class="badge-promo">FLASH SALE</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Diskonku Akhir Bulan: Joki Event Arwah Potong Harga . khusus tgl 26 juni 2026,joki event potongan harga hingga 69% </h3>
+                            <p>Khusus buat kamu yang nge-joki lewat event Diskonku, nikmati potongan harga langsung tanpa ribet untuk semua layanan Toram Online. Yuk klaim vouchermu sekarang sebelum event habis!</p>
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="https://github.com/user-attachments/assets/5700c24c-a13c-4e2e-a13f-071c1e193726" alt="on going promo">
+                            <span class="badge-promo">INFO</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>SILAHKAN TUNGGU EVENT DISKON SELANJUTNYA YA</h3>
+                            <p>Khusus buat kamu yang nge-joki lewat event Diskonku, nikmati potongan harga langsung tanpa ribet untuk semua layanan Toram Online. Yuk klaim vouchermu sekarang sebelum event habis!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <button class="slide-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
 
@@ -54,12 +105,12 @@
         <h2>Formulir Pemesanan</h2>
         <form id="orderForm">
             <div class="form-group">
-                <label for="gameSelect">Game Terpilih</label>
-                <input type="text" id="gameSelect" readonly placeholder="Pilih game di atas dahulu">
+                <label for="gameSelect">personal kontak</label>
+                <input type="text" id="gameSelect" readonly placeholder="no whatsapp">
             </div>
             <div class="form-group">
-                <label for="ign">IN GAME NAME</label>
-                <input type="text" id="ign" required placeholder="Contoh: IGN : RAMLOREI">
+                <label for="userId">IN GAME NAME</label>
+                <input type="text" id="userId" required placeholder="Contoh: IGN : RAMLOREI">
             </div>
             <div class="form-group">
                 <label for="qty">Jumlah (Bab mq/point event/material)</label>
