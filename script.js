@@ -46,7 +46,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
                   `Mohon segera diproses ya!`;
                   
     // Membuka tab baru menuju WhatsApp menggunakan variabel nomorWhatsApp yang benar
-    window.open(`https://api.whatsapp.com/send?phone=${nomorWhatsApp}&text=${pesan}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=${6285363615993}&text=${pesan}`, '_blank');
 });
 
 // ==========================================
